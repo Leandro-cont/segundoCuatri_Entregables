@@ -46,19 +46,19 @@ export class Registro{
     altaAuto(auto: Auto): void{
         this.auto.push(auto);
     }
-    altaCa(camion: Camion): void{
+    altaCamion(camion: Camion): void{
         this.camion.push(camion);
     }
 
-    // bajaMoto(moto: Moto): void{
-    //     this.moto = this.moto.filter(moto =>);
-    // }
+    bajaMoto(patente: string): void{
+        this.moto = this.moto.filter(moto => moto.getPatenteMoto()!== patente);
+    }
     
-    // altaMoto(moto: Moto): void{
-    //     this.moto.push(moto);
-    // }
-    
-    // altaMoto(moto: Moto): void{
-    //     this.moto.push(moto);
-    // }
+    bajaAuto(patente: string): void{
+        this.auto = this.auto.filter(auto => auto.getPatenteAuto()!== patente);
+    }
+
+    bajaCamion(patente: string): void{
+        this.camion = this.camion.filter(camion => camion.getPatenteCamion()!== patente);
+    }
 }

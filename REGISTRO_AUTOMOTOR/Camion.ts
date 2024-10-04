@@ -3,12 +3,14 @@ export class Camion{
     private modelo: string;
     private anioDeFabricacion: number;
     private ejes: number;
+    private patente: string;
 
-    constructor(marca: string, modelo: string, anioDeFabr: number, ejes: number){
+    constructor(marca: string, modelo: string, anioDeFabr: number, ejes: number, patente: string){
         this.marca = marca;
         this.modelo = modelo;
         this.anioDeFabricacion = anioDeFabr;
         this.ejes = ejes;
+        this.patente = patente;
     }
 
     getMarcaCamion(): string{
@@ -25,5 +27,9 @@ export class Camion{
 
     getEjesCamion(): number{
         return this.ejes;
+    }
+
+    getPatenteCamion(): string{
+        return this.patente;
     }
 }
