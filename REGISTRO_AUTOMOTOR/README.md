@@ -1,0 +1,1 @@
+Cree este archivo para aclarar que esta carpeta contiene el trabajo de composicion y el de herencia ya que se podia hacer conm el mismo.
