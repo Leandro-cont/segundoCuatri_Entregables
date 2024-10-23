@@ -1,14 +1,14 @@
-export class Auto{
+import { Vehiculo } from "./Vehiculo";
+export class Auto extends Vehiculo{
     private marca: string;
     private modelo: string;
-    private anioDeFabricacion: number;
-    private motor: string;
-    private patente: string;
 
-    constructor(marca:string, modelo: string, anioDeFabricacion: number, motor: string, patente: string){
+
+    constructor(marca:string, modelo: string, anioFabricacion: number, motor: string, patente: string){
+        super (motor, patente, anioFabricacion)
         this.marca = marca;
         this.modelo = modelo;
-        this.anioDeFabricacion = anioDeFabricacion;
+        this.anioFabricacion = anioFabricacion;
         this.motor = motor;
         this.patente = patente
     }
@@ -22,7 +22,7 @@ export class Auto{
     }
 
     getAnioDeFabrAuto(): number{
-        return this.anioDeFabricacion;
+        return this.anioFabricacion;
     }
 
     getMotorAuto(): string{
